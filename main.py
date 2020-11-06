@@ -1,5 +1,6 @@
 # import modules
 # %% [Modules]
+from config import *
 
 # define functions here
 # %% [Functions]
