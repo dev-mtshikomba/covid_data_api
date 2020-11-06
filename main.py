@@ -10,7 +10,7 @@ import requests
 def pull_counties_data_from_api(county=None):
     '''
         county: - when set to None this function returns all the conties
-               - to get one state set it to a county FIPS postal code e.g. Washtenaw = 
+               - to get one county set it to a county FIPS postal code e.g. Autauga = 01001
                - List of county FIPS codes (https://www.nrcs.usda.gov/wps/portal/nrcs/detail/national/home/?cid=nrcs143_013697)
     '''
     if county:
