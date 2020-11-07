@@ -3,7 +3,6 @@
 from config import *
 import requests
 import csv
-import pandas as pd
 # define functions here
 # %% [Functions]
 
@@ -56,8 +55,6 @@ def write_data_to_csv_file(json_object):
 
 # AWS Lambda Function
 # %% [Lambda Function]
-
-
 def main(event=None, contex=None):
     write_data_to_csv_file(pull_counties_data_from_api())
 
@@ -66,3 +63,5 @@ def main(event=None, contex=None):
 # %% [Main Method]
 if __name__ == "__main__":
     main()
+
+# %%
