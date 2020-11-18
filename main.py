@@ -3,6 +3,7 @@
 from config import *
 import requests
 import csv
+import boto3
 # define functions here
 # %% [Functions]
 
@@ -57,7 +58,10 @@ def write_data_to_csv_file(json_object):
 # %% [Lambda Function]
 def main(event=None, contex=None):
     write_data_to_csv_file(pull_counties_data_from_api())
-
+    s3 = boto3.resource('s3',
+                        aws_access_key_id='AKIA4DMTNGFHKBJEISGU',
+                        aws_secret_access_key='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')
+    s3.Bucket('covid-data').upload_file('counties_data.csv', 'counties_data.csv')
 
 # implement main method
 # %% [Main Method]
