@@ -32,7 +32,7 @@ def pull_state_data_from_api(state=None):
 
 def write_data_to_csv_file(json_object):
     # now we will open a file for writing
-    data_file = open('counties_data_1.csv', 'w')
+    data_file = open('counties_data.csv', 'w')
 
     # create the csv writer object
     csv_writer = csv.writer(data_file)
