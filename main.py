@@ -56,6 +56,7 @@ def write_data_to_csv_file(json_object):
 
 # AWS Lambda Function
 # %% [Lambda Function]
+
 def main(event=None, contex=None):
     write_data_to_csv_file(pull_counties_data_from_api())
     s3 = boto3.resource('s3',
