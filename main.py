@@ -5,6 +5,7 @@ import requests
 import csv
 import boto3
 import s3fs
+from datetime import datetime
 
 # define functions here
 # %% [Functions]
@@ -75,7 +76,9 @@ def write_data_to_csv_file(json_object):
 # AWS Lambda Function
 # %% [Lambda Function]
 def main(event=None, contex=None):
+    print("Start @: ", datetime.now().strftime("%H:%M:%S"))
     write_data_to_csv_file(pull_counties_data_from_api())
+    print("End @: ", datetime.now().strftime("%H:%M:%S"))
     # s3 = boto3.resource('s3',
     #                    aws_access_key_id='AKIA4DMTNGFHKBJEISGU',
     #                    aws_secret_access_key='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')
