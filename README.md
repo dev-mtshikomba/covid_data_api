@@ -7,7 +7,7 @@
 # Configuration
 - Since this is public data anyone has access to this file object and they can download it.
 
-# How to us this project
+# How to use this project
 - For anyone who wants to reproduce this project, you can do so by following the instructions below:
 > - Create a IAM Role on the AWS Console, give it the required permissions you can create a policy and attached it to the role.
 > - $ 
